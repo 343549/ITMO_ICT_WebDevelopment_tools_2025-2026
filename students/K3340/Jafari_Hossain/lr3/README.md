@@ -1,4 +1,4 @@
-# Лабораторная работа 3 — Saeed Nawaf, k3341
+# Лабораторная работа 3 — Jafari Hossain, k3340
 
 Упаковка FastAPI в Docker, сервис-парсер по HTTP, очередь задач Celery + Redis.
 
