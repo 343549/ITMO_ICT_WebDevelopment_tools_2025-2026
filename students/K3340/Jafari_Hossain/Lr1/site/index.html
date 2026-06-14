@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Лабораторная работа 1</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u041b\u0430\u0431\u043e\u0440\u0430\u0442\u043e\u0440\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430 1";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Лабораторная работа 1
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Лабораторная работа 1</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1">1. Цель работы</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2">2. Используемые технологии</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3">3. Предметная область</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4">4. Структура проекта</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-er">5. Модель данных (ER)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">Связи</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-api">6. Реализованный API</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#61">6.1 Аутентификация и пользователь</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#62-crud">6.2 CRUD предметной области</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#63">6.3 Вложенные ответы</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7">7. Безопасность</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8">8. Миграции базы данных</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9">9. Инструкция запуска</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10">10. Сценарий демонстрации на защите</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#11">11. Соответствие требованиям ЛР</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12">12. Вывод</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Лабораторная работа 1</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Лабораторная работа 1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="no1">Лабораторная работа №1<a class="headerlink" href="#no1" title="Permanent link">&para;</a></h1>
+<p><strong>Тема:</strong> Разработка серверной части веб-платформы для поиска людей в команду (FastAPI)</p>
+<h2 id="1">1. Цель работы<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>Реализовать полноценное серверное приложение на FastAPI с:
+- регистрацией и авторизацией пользователей;
+- JWT-аутентификацией;
+- хэшированием паролей;
+- CRUD-операциями для предметной области;
+- PostgreSQL + ORM;
+- миграциями Alembic;
+- аннотацией типов и структурированной файловой архитектурой.</p>
+<h2 id="2">2. Используемые технологии<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Python 3.12</strong></li>
+<li><strong>FastAPI</strong></li>
+<li><strong>SQLAlchemy 2.0</strong></li>
+<li><strong>PostgreSQL</strong> (через <code>psycopg</code>)</li>
+<li><strong>Alembic</strong></li>
+<li><strong>JWT</strong> (<code>python-jose</code>)</li>
+<li><strong>bcrypt</strong></li>
+<li><strong>Docker Compose</strong> (для локального запуска PostgreSQL)</li>
+</ul>
+<h2 id="3">3. Предметная область<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>Платформа предназначена для поиска партнеров в команды и совместной работы над проектами:
+- пользователи создают профиль;
+- указывают навыки;
+- создают проекты и команды;
+- управляют участниками и задачами.</p>
+<h2 id="4">4. Структура проекта<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<pre><code class="language-text">1lab/
+  app/
+    db/
+    models/
+    routes/
+    schemas/
+    config.py
+    deps.py
+    main.py
+    security.py
+  alembic/
+    versions/
+  alembic.ini
+  docker-compose.yml
+  ERD.md
+  README.md
+  requirements.txt
+</code></pre>
+<h2 id="5-er">5. Модель данных (ER)<a class="headerlink" href="#5-er" title="Permanent link">&para;</a></h2>
+<p>Реализовано <strong>7 таблиц</strong>:
+- <code>users</code>
+- <code>skills</code>
+- <code>projects</code>
+- <code>teams</code>
+- <code>project_tasks</code>
+- <code>user_skills</code> (ассоциативная)
+- <code>team_memberships</code> (ассоциативная)</p>
+<h3 id="_1">Связи<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>one-to-many</strong>:</li>
+<li><code>users -&gt; projects</code></li>
+<li><code>projects -&gt; teams</code></li>
+<li><code>teams -&gt; project_tasks</code></li>
+<li><strong>many-to-many</strong>:</li>
+<li><code>users &lt;-&gt; skills</code> через <code>user_skills</code> с полем <code>proficiency</code></li>
+<li><code>teams &lt;-&gt; users</code> через <code>team_memberships</code> с полем <code>role</code></li>
+</ul>
+<p>ER-диаграмма: <code>ERD.md</code></p>
+<h2 id="6-api">6. Реализованный API<a class="headerlink" href="#6-api" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 Аутентификация и пользователь<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>POST /auth/register</code> — регистрация</li>
+<li><code>POST /auth/login</code> — получение JWT</li>
+<li><code>GET /users/</code> — список пользователей</li>
+<li><code>GET /users/me</code> — текущий пользователь по токену</li>
+<li><code>GET /users/me/profile</code> — профиль с вложенными навыками</li>
+<li><code>PUT /users/me/skills</code> — добавить/обновить навык пользователя</li>
+<li><code>DELETE /users/me/skills/{skill_id}</code> — удалить навык пользователя</li>
+<li><code>POST /users/me/change-password</code> — смена пароля</li>
+</ul>
+<h3 id="62-crud">6.2 CRUD предметной области<a class="headerlink" href="#62-crud" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>skills</code>: <code>POST/GET/GET by id/PUT/DELETE</code></li>
+<li><code>projects</code>: <code>POST/GET/GET by id/PUT/DELETE</code></li>
+<li><code>teams</code>: <code>POST/GET/GET by id/PUT/DELETE</code></li>
+<li><code>tasks</code>: <code>POST/GET/GET by id/PUT/DELETE</code></li>
+<li><code>teams/{team_id}/members</code>: добавление/обновление роли/удаление участника</li>
+</ul>
+<h3 id="63">6.3 Вложенные ответы<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /projects/{project_id}</code> возвращает проект с вложенными:</li>
+<li>командами,</li>
+<li>участниками команд,</li>
+<li>задачами.</li>
+<li><code>GET /teams/{team_id}</code> возвращает команду с вложенными:</li>
+<li>участниками,</li>
+<li>задачами.</li>
+</ul>
+<h2 id="7">7. Безопасность<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Пароли хранятся в виде bcrypt-хэшей.</li>
+<li>JWT-токен выдаётся при логине и используется в <code>Authorization: Bearer &lt;token&gt;</code>.</li>
+<li>Проверка токена и получение текущего пользователя реализованы через dependency <code>get_current_user</code>.</li>
+</ul>
+<h2 id="8">8. Миграции базы данных<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Конфиг: <code>alembic.ini</code></li>
+<li>Окружение: <code>alembic/env.py</code></li>
+<li>Первая миграция: <code>alembic/versions/20260403_0001_initial_schema.py</code></li>
+</ul>
+<p>Применение миграций:</p>
+<pre><code class="language-bash">.venv\Scripts\alembic.exe upgrade head
+</code></pre>
+<h2 id="9">9. Инструкция запуска<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Установить зависимости:</li>
+</ol>
+<pre><code class="language-bash">py -m venv .venv
+.venv\Scripts\pip.exe install -r requirements.txt
+</code></pre>
+<ol>
+<li>Поднять PostgreSQL:</li>
+</ol>
+<pre><code class="language-bash">docker compose up -d
+</code></pre>
+<ol>
+<li>Настроить <code>.env</code> (по примеру <code>.env.example</code>).</li>
+<li>Применить миграции:</li>
+</ol>
+<pre><code class="language-bash">.venv\Scripts\alembic.exe upgrade head
+</code></pre>
+<ol>
+<li>Запустить API:</li>
+</ol>
+<pre><code class="language-bash">.venv\Scripts\uvicorn.exe app.main:app --reload --port 8000
+</code></pre>
+<ol>
+<li>Swagger:</li>
+</ol>
+<pre><code class="language-text">http://127.0.0.1:8000/docs
+</code></pre>
+<h2 id="10">10. Сценарий демонстрации на защите<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Регистрация пользователя (<code>/auth/register</code>)</li>
+<li>Логин и получение JWT (<code>/auth/login</code>)</li>
+<li>Авторизация в Swagger через <code>Bearer token</code></li>
+<li>Создание навыка (<code>/skills</code>)</li>
+<li>Добавление навыка текущему пользователю (<code>/users/me/skills</code>)</li>
+<li>Создание проекта (<code>/projects</code>)</li>
+<li>Создание команды (<code>/teams</code>)</li>
+<li>Создание задачи (<code>/tasks</code>)</li>
+<li>Показ вложенного ответа (<code>/projects/{id}</code>)</li>
+<li>Смена пароля (<code>/users/me/change-password</code>)</li>
+</ol>
+<h2 id="11">11. Соответствие требованиям ЛР<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<ul>
+<li>FastAPI сервер: <strong>выполнено</strong></li>
+<li>ORM + PostgreSQL: <strong>выполнено</strong></li>
+<li>CRUD API: <strong>выполнено</strong></li>
+<li>Вложенные модели в GET: <strong>выполнено</strong></li>
+<li>Миграции Alembic: <strong>выполнено</strong></li>
+<li>Аннотация типов: <strong>выполнено</strong></li>
+<li>Разделение кода по слоям/папкам: <strong>выполнено</strong></li>
+<li>Комментарии к сложным частям: <strong>выполнено</strong></li>
+</ul>
+<h2 id="12">12. Вывод<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>В ходе работы реализовано серверное приложение на FastAPI с аутентификацией, безопасной работой с паролями, реляционной моделью данных с требуемыми связями, набором CRUD-методов и миграциями. Проект готов к демонстрации и дальнейшему расширению функционала платформы.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-04-06 13:19:27.493813+00:00
+-->

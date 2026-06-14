@@ -1,0 +1,8 @@
+site_name: Лабораторная работа 1
+theme:
+  name: readthedocs
+nav:
+  - Лабораторная работа 1: index.md
+markdown_extensions:
+  - toc:
+      permalink: true
