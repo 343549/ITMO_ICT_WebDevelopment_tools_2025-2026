@@ -8,9 +8,11 @@
       
       
       
+        <link rel="canonical" href="https://nnaafff1.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/lr3/">
       
       
-        <link rel="next" href="theory/">
+      
+        <link rel="next" href="architecture/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Лабораторная работа 2 — Потоки, Процессы, Асинхронность</title>
+        <title>Лабораторная работа 3 — Docker, парсер по HTTP, Celery</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2" class="md-skip">
+        <a href="#3" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -82,7 +84,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href="." title="Лабораторная работа 2 — Потоки, Процессы, Асинхронность" class="md-header__button md-logo" aria-label="Лабораторная работа 2 — Потоки, Процессы, Асинхронность" data-md-component="logo">
+    <a href="." title="Лабораторная работа 3 — Docker, парсер по HTTP, Celery" class="md-header__button md-logo" aria-label="Лабораторная работа 3 — Docker, парсер по HTTP, Celery" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,7 +98,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Лабораторная работа 2 — Потоки, Процессы, Асинхронность
+            Лабораторная работа 3 — Docker, парсер по HTTP, Celery
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -196,13 +198,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="theory/" class="md-tabs__link">
+      <a href="architecture/" class="md-tabs__link">
         
   
   
     
   
-  Теория
+  Архитектура
 
       </a>
     </li>
@@ -215,13 +217,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="task1/" class="md-tabs__link">
+      <a href="docker/" class="md-tabs__link">
         
   
   
     
   
-  Задача 1 — Сумма
+  Docker и compose
 
       </a>
     </li>
@@ -234,13 +236,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="task2/" class="md-tabs__link">
+      <a href="parser_service/" class="md-tabs__link">
         
   
   
     
   
-  Задача 2 — Парсинг
+  Сервис-парсер
 
       </a>
     </li>
@@ -253,13 +255,32 @@
   
   
     <li class="md-tabs__item">
-      <a href="conclusion/" class="md-tabs__link">
+      <a href="celery/" class="md-tabs__link">
         
   
   
     
   
-  Выводы
+  Celery и Redis
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="usage/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Запуск
 
       </a>
     </li>
@@ -291,13 +312,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="usage/" class="md-tabs__link">
+      <a href="conclusion/" class="md-tabs__link">
         
   
   
     
   
-  Запуск
+  Выводы
 
       </a>
     </li>
@@ -328,13 +349,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Лабораторная работа 2 — Потоки, Процессы, Асинхронность" class="md-nav__button md-logo" aria-label="Лабораторная работа 2 — Потоки, Процессы, Асинхронность" data-md-component="logo">
+    <a href="." title="Лабораторная работа 3 — Docker, парсер по HTTP, Celery" class="md-nav__button md-logo" aria-label="Лабораторная работа 3 — Docker, парсер по HTTP, Celery" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Лабораторная работа 2 — Потоки, Процессы, Асинхронность
+    Лабораторная работа 3 — Docker, парсер по HTTP, Celery
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -378,12 +399,12 @@
   
   
     <li class="md-nav__item">
-      <a href="theory/" class="md-nav__link">
+      <a href="architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Теория
+    Архитектура
     
   </span>
   
@@ -400,12 +421,12 @@
   
   
     <li class="md-nav__item">
-      <a href="task1/" class="md-nav__link">
+      <a href="docker/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Задача 1 — Сумма
+    Docker и compose
     
   </span>
   
@@ -422,12 +443,12 @@
   
   
     <li class="md-nav__item">
-      <a href="task2/" class="md-nav__link">
+      <a href="parser_service/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Задача 2 — Парсинг
+    Сервис-парсер
     
   </span>
   
@@ -444,12 +465,34 @@
   
   
     <li class="md-nav__item">
-      <a href="conclusion/" class="md-nav__link">
+      <a href="celery/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Выводы
+    Celery и Redis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Запуск
     
   </span>
   
@@ -488,12 +531,12 @@
   
   
     <li class="md-nav__item">
-      <a href="usage/" class="md-nav__link">
+      <a href="conclusion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Запуск
+    Выводы
     
   </span>
   
@@ -519,66 +562,62 @@
 
 
 
-<h1 id="2">Лабораторная работа 2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
-<h1 id="_1">Потоки. Процессы. Асинхронность<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="3">Лабораторная работа 3<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<h1 id="fastapi-docker">Упаковка FastAPI приложения в Docker, источники данных и очереди<a class="headerlink" href="#fastapi-docker" title="Permanent link">&para;</a></h1>
 <p><strong>Дата:</strong> Май 2026</p>
 <hr />
-<h2 id="_2">Цель работы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Понять отличия между потоками (threading) и процессами (multiprocessing),
-а также разобраться, что такое асинхронность (asyncio) в Python.
-Научиться выбирать подходящий инструмент параллелизма в зависимости от
-характера задачи: CPU-bound или I/O-bound.</p>
-<h2 id="_3">Задание<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>Реализовать две задачи:</p>
+<h2 id="_1">Цель работы<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Научиться упаковывать FastAPI-приложение в Docker, интегрировать парсер
+данных с базой данных и вызывать парсер двумя способами: синхронно
+через HTTP и асинхронно через очередь задач Celery + Redis.</p>
+<h2 id="_2">Задание<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p><strong>Задача 1.</strong> Подсчитать сумму всех чисел от 1 до 10 000 000 000 000
-   (10¹³) тремя способами — через <code>threading</code>, <code>multiprocessing</code> и
-   <code>asyncio</code>. Разделить вычисления на параллельные подзадачи и сравнить
-   время выполнения.</p>
-</li>
-<li>
-<p><strong>Задача 2.</strong> Реализовать параллельный парсинг нескольких веб-страниц
-   с сохранением данных в БД из лабораторной работы №1. Тремя способами
-   (<code>threading</code>, <code>multiprocessing</code>, <code>asyncio</code>). Подключение к БД сделать
-   асинхронным.</p>
-</li>
+<li>Упаковать FastAPI-приложение из Lab 1, базу данных PostgreSQL и
+   парсер из Lab 2 в Docker. Парсер реализован как <strong>отдельный
+   FastAPI-сервис в своём контейнере</strong> и принимает запросы по HTTP.</li>
+<li>Добавить в основное API эндпоинт, который принимает URL от клиента,
+   обращается к сервису-парсеру (в другом контейнере) и возвращает
+   результат.</li>
+<li>Добавить эндпоинт асинхронного вызова парсера через Celery + Redis,
+   эндпоинт опроса статуса задачи и Celery-воркер в отдельном
+   контейнере.</li>
 </ol>
+<h2 id="_3">Структура проекта<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>lr3/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── docker-compose.yaml          # пять сервисов: db, redis, api, parser, worker
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── .env.example                 # шаблон переменных окружения
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── mkdocs.yml                   # документация
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── api/                         # основное FastAPI приложение (Lab 1 + parser router)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   ├── src/
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   │   ├── main.py              # подключает все роутеры, включая parser
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   │   ├── routers/parser.py    # /parser/parse, /parser/parse-async, /parser/tasks/{id}
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   │   └── ...                  # auth, users, projects, skills, team_requests (Lab 1)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   ├── Dockerfile
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   └── requirements.txt
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── parser_service/              # сервис-парсер
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   ├── src/
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   │   ├── main.py              # POST /parse
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│   │   └── parser.py            # перенос из Lab 2: BeautifulSoup + requests
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│   ├── Dockerfile
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│   └── requirements.txt
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── worker/                      # Celery worker
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│   ├── celery_app.py
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│   ├── tasks.py                 # parse_url_task
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│   ├── models.py
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│   ├── Dockerfile
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>│   └── requirements.txt
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>└── docs/                        # этот сайт (MkDocs)
+</code></pre></div>
 <h2 id="_4">Содержание отчёта<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
-<li><a href="theory/">Теоретические основы</a> — GIL, threading, multiprocessing, asyncio</li>
-<li><a href="task1/">Задача 1 — Сумма от 1 до 10¹³</a> — три реализации, замеры, анализ</li>
-<li><a href="task2/">Задача 2 — Параллельный парсинг + БД</a> — три парсера, асинхронный psycopg, анализ</li>
-<li><a href="conclusion/">Итоговые выводы</a></li>
-<li><a href="usage/">Запуск проекта</a> — установка, команды, проверка</li>
+<li><a href="architecture/">Архитектура</a> — диаграмма сервисов и взаимодействий</li>
+<li><a href="docker/">Docker и compose</a> — Dockerfile-ы, оркестрация, healthcheck-и</li>
+<li><a href="parser_service/">Сервис-парсер</a> — отдельное FastAPI-приложение</li>
+<li><a href="celery/">Celery и Redis</a> — очередь, воркер, опрос статуса</li>
+<li><a href="usage/">Запуск</a> — пошаговая инструкция и примеры curl</li>
+<li><a href="screenshots/">Скриншоты</a> — рабочая система</li>
+<li><a href="conclusion/">Выводы</a></li>
 </ol>
-<h2 id="_5">Структура проекта<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>lab2/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── mkdocs.yml
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── requirements.txt
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── docs/                            ← данный сайт
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   ├── index.md
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   ├── theory.md
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   ├── task1.md
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   ├── task2.md
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   ├── conclusion.md
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   └── usage.md
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── task1/
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   ├── sum_threading.py
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   ├── sum_multiprocessing.py
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   ├── sum_async.py
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│   └── benchmark.py
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>└── task2/
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    ├── .env
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    ├── config.py
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    ├── models.py
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    ├── parser_common.py
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    ├── scrape_threading.py
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    ├── scrape_multiprocessing.py
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    ├── scrape_async.py
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    ├── benchmark.py
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    └── requirements.txt
-</code></pre></div>
 
 
 
